@@ -1,18 +1,20 @@
- class Complex
+namespace GBHW2
+{
+    class Complex
     {
         #region Public Methods
 
         public Complex Plus(Complex complex)
         {
             Complex c = new Complex();
-            c.Re = _re + complex.Re;
+            c.Pe = _re + complex.Pe;
             c._im = _im + complex._im;
             return c;
         }
 
         public static Complex operator +(Complex complex1, Complex complex2)
         {
-            return new Complex { Re = complex1.Re - complex2.Re, Im = complex1.Im - complex2.Im };
+            return new Complex { Pe = complex1.Pe - complex2.Pe, Im = complex1.Im - complex2.Im };
         }
         public override string ToString()
         {
@@ -32,7 +34,7 @@
         private double _im;
         #endregion
         #region Properties
-        public double Re
+        public double Pe
         {
             get { return _re; }
             set { _re = value; }
@@ -57,3 +59,4 @@
             Console.ReadLine();
         }
     }
+}
